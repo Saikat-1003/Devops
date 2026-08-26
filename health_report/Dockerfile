@@ -1,11 +1,10 @@
-FROM alpine:latest
-
-RUN apk add --no-cache bash procps
-
+FROM rockylinux:9
+ 
+RUN dnf install -y procps-ng coreutils util-linux && \
+    dnf clean all
+ 
 WORKDIR /app
-
-COPY health_check.sh .
-
-RUN chmod +x health_check.sh
-
-CMD ["./health_check.sh"]
+COPY health_check.sh /app/health_check.sh
+RUN chmod +x /app/health_check.sh
+ 
+CMD ["/app/health_check.sh"]
