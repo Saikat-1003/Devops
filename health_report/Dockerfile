@@ -1,7 +1,7 @@
 FROM rockylinux:9
  
-RUN dnf install -y procps-ng coreutils util-linux && \
-    dnf clean all
+RUN dnf install -y procps-ng
+RUN dnf clean all
  
 WORKDIR /app
 COPY health_check.sh /app/health_check.sh
