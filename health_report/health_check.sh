@@ -14,7 +14,7 @@ free -h
 echo ""
  
 echo "---- Disk Usage ----"
-df -h /
+df -h /host
 echo ""
  
 echo "==== Check Complete ===="
