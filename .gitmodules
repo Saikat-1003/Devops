@@ -1,0 +1,3 @@
+[submodule "maven_projects/maven_standalone_application"]
+	path = maven_projects/maven_standalone_application
+	url = git@github.com:Saikat-1003/maven-standalone-application.git
